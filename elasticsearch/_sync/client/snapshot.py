@@ -24,6 +24,7 @@ from .utils import SKIP_IN_PATH, _quote, _rewrite_parameters
 
 
 class SnapshotClient(NamespacedClient):
+
     @_rewrite_parameters()
     def cleanup_repository(
         self,
@@ -41,7 +42,7 @@ class SnapshotClient(NamespacedClient):
         """
         Removes stale data from repository.
 
-        `<https://www.elastic.co/guide/en/elasticsearch/reference/master/clean-up-snapshot-repo-api.html>`_
+        `<https://www.elastic.co/guide/en/elasticsearch/reference/8.13/clean-up-snapshot-repo-api.html>`_
 
         :param name: Snapshot repository to clean up.
         :param master_timeout: Period to wait for a connection to the master node.
@@ -91,7 +92,7 @@ class SnapshotClient(NamespacedClient):
         """
         Clones indices from one snapshot into another snapshot in the same repository.
 
-        `<https://www.elastic.co/guide/en/elasticsearch/reference/master/modules-snapshots.html>`_
+        `<https://www.elastic.co/guide/en/elasticsearch/reference/8.13/modules-snapshots.html>`_
 
         :param repository: A repository name
         :param snapshot: The name of the snapshot to clone from
@@ -165,7 +166,7 @@ class SnapshotClient(NamespacedClient):
         """
         Creates a snapshot in a repository.
 
-        `<https://www.elastic.co/guide/en/elasticsearch/reference/master/modules-snapshots.html>`_
+        `<https://www.elastic.co/guide/en/elasticsearch/reference/8.13/modules-snapshots.html>`_
 
         :param repository: Repository for the snapshot.
         :param snapshot: Name of the snapshot. Must be unique in the repository.
@@ -263,7 +264,7 @@ class SnapshotClient(NamespacedClient):
         """
         Creates a repository.
 
-        `<https://www.elastic.co/guide/en/elasticsearch/reference/master/modules-snapshots.html>`_
+        `<https://www.elastic.co/guide/en/elasticsearch/reference/8.13/modules-snapshots.html>`_
 
         :param name: A repository name
         :param settings:
@@ -325,7 +326,7 @@ class SnapshotClient(NamespacedClient):
         """
         Deletes one or more snapshots.
 
-        `<https://www.elastic.co/guide/en/elasticsearch/reference/master/modules-snapshots.html>`_
+        `<https://www.elastic.co/guide/en/elasticsearch/reference/8.13/modules-snapshots.html>`_
 
         :param repository: A repository name
         :param snapshot: A comma-separated list of snapshot names
@@ -369,7 +370,7 @@ class SnapshotClient(NamespacedClient):
         """
         Deletes a repository.
 
-        `<https://www.elastic.co/guide/en/elasticsearch/reference/master/modules-snapshots.html>`_
+        `<https://www.elastic.co/guide/en/elasticsearch/reference/8.13/modules-snapshots.html>`_
 
         :param name: Name of the snapshot repository to unregister. Wildcard (`*`) patterns
             are supported.
@@ -431,7 +432,7 @@ class SnapshotClient(NamespacedClient):
         """
         Returns information about a snapshot.
 
-        `<https://www.elastic.co/guide/en/elasticsearch/reference/master/modules-snapshots.html>`_
+        `<https://www.elastic.co/guide/en/elasticsearch/reference/8.13/modules-snapshots.html>`_
 
         :param repository: Comma-separated list of snapshot repository names used to
             limit the request. Wildcard (*) expressions are supported.
@@ -536,7 +537,7 @@ class SnapshotClient(NamespacedClient):
         """
         Returns information about a repository.
 
-        `<https://www.elastic.co/guide/en/elasticsearch/reference/master/modules-snapshots.html>`_
+        `<https://www.elastic.co/guide/en/elasticsearch/reference/8.13/modules-snapshots.html>`_
 
         :param name: A comma-separated list of repository names
         :param local: Return local information, do not retrieve the state from master
@@ -607,7 +608,7 @@ class SnapshotClient(NamespacedClient):
         """
         Restores a snapshot.
 
-        `<https://www.elastic.co/guide/en/elasticsearch/reference/master/modules-snapshots.html>`_
+        `<https://www.elastic.co/guide/en/elasticsearch/reference/8.13/modules-snapshots.html>`_
 
         :param repository: A repository name
         :param snapshot: A snapshot name
@@ -692,7 +693,7 @@ class SnapshotClient(NamespacedClient):
         """
         Returns information about the status of a snapshot.
 
-        `<https://www.elastic.co/guide/en/elasticsearch/reference/master/modules-snapshots.html>`_
+        `<https://www.elastic.co/guide/en/elasticsearch/reference/8.13/modules-snapshots.html>`_
 
         :param repository: A repository name
         :param snapshot: A comma-separated list of snapshot names
@@ -741,7 +742,7 @@ class SnapshotClient(NamespacedClient):
         """
         Verifies a repository.
 
-        `<https://www.elastic.co/guide/en/elasticsearch/reference/master/modules-snapshots.html>`_
+        `<https://www.elastic.co/guide/en/elasticsearch/reference/8.13/modules-snapshots.html>`_
 
         :param name: A repository name
         :param master_timeout: Explicit operation timeout for connection to master node
